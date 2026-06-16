@@ -1,14 +1,9 @@
 name: Simple composite action example
 description: "Simple composite action example"
 
-inputs:
-  environment_name:
-    description: "Name of environment"
-    required: true
-
 runs:
   using: "composite"
   steps:
-    - name: Environment name
+    - name: test-composite
       shell: bash
-      run: echo "Hello, this is ${{ inputs.environment_name }} environment"
+      run: echo "Hello, this is from coposite action workflow"
